@@ -16,7 +16,7 @@
         /* OpenGL */
         "--device=dri",
         "--persist=Jagex",
-        "--extra-data=runescape.deb:1550c4f6095305329de315806dc42be6d2c47d3b2e3f3c90feefd13b7fc67047:3014716::https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb"
+        "--extra-data=runescape.deb:c57c84286c50959d47dfff54490d87849d12830cccd703373917720822e002de:3013304::https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
