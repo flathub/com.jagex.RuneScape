@@ -40,10 +40,10 @@
             "cleanup": ["/bin", "/include", "/lib/pkgconfig", "/share"],
             "sources": [
                 {
-                    /* Must be version 1.2 */
+                    /* Must be version 1.2.x */
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libpng/libpng12/older-releases/1.2.56/libpng-1.2.56.tar.xz",
-                    "sha256": "24ce54581468b937734a6ecc86f7e121bc46a90d76a0d948dca08f32ee000dbe"
+                    "url": "https://downloads.sourceforge.net/project/libpng/libpng12/1.2.59/libpng-1.2.59.tar.xz",
+                    "sha256": "b4635f15b8adccc8ad0934eea485ef59cc4cae24d0f0300a9a941e51974ffcc7"
                 }
             ]
         },
