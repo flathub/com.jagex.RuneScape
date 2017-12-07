@@ -16,7 +16,7 @@
         /* OpenGL */
         "--device=dri",
         "--persist=Jagex",
-        "--extra-data=runescape.deb:75d1fbcdac2ddbe9f8915ba5aa205003e452cfa18a7ba33dc8951ded72fbc6c6:3019166::https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb"
+        "--extra-data=runescape.deb:f7a66c5a6730d1616ccc0a66d98ad210837c364e67292e4d99a029ad9a217a71:3014372::https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
@@ -42,7 +42,7 @@
                 {
                     /* Must be version 1.2 */
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libpng/libpng12/1.2.56/libpng-1.2.56.tar.xz",
+                    "url": "https://downloads.sourceforge.net/project/libpng/libpng12/older-releases/1.2.56/libpng-1.2.56.tar.xz",
                     "sha256": "24ce54581468b937734a6ecc86f7e121bc46a90d76a0d948dca08f32ee000dbe"
                 }
             ]
