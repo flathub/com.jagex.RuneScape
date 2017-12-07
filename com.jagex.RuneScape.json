@@ -42,7 +42,7 @@
                 {
                     /* Must be version 1.2 */
                     "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libpng/libpng12/1.2.56/libpng-1.2.56.tar.xz",
+                    "url": "https://downloads.sourceforge.net/project/libpng/libpng12/older-releases/1.2.56/libpng-1.2.56.tar.xz",
                     "sha256": "24ce54581468b937734a6ecc86f7e121bc46a90d76a0d948dca08f32ee000dbe"
                 }
             ]
