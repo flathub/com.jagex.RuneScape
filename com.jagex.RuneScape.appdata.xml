@@ -9,6 +9,17 @@
       Play the best MMORPG RuneScape for free. Join the millions of others already exploring the fantasy game world of Gielinor.
     </p>
   </description>
+  <screenshots>
+    <screenshot>
+      <image type="source">https://cdn.runescape.com/assets/img/external/news/2016/02/dev-blog/3-NXT-global-illumination.jpg</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://cdn.runescape.com/assets/img/external/news/2016/02/dev-blog/5-NXT-global-illumination.jpg</image>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://cdn.runescape.com/assets/img/external/news/2016/02/dev-blog/10-water-effects.jpg</image>
+    </screenshot>
+  </screenshots>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">http://www.runescape.com/</url>
