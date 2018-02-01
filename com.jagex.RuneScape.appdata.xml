@@ -21,6 +21,9 @@
   <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w128</icon>
   <icon type="remote" height="256" width="256">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w256</icon>
   <icon type="remote" height="512" width="512">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w512</icon>
+  <categories>
+    <category>Game</category>
+  </categories>
   <kudos>
     <kudo>HiDpiIcon</kudo>
   </kudos>
