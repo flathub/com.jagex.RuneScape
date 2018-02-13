@@ -15,8 +15,7 @@
         "--share=network",
         /* OpenGL */
         "--device=dri",
-        "--persist=Jagex",
-        "--extra-data=runescape.deb:e46f1e4e1969eacbf13d2092c9073ba2c40f876f9434d5a58a267ca474c646ab:3016040::https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb"
+        "--persist=Jagex"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
@@ -128,6 +127,14 @@
                 {
                     "type": "file",
                     "path": "com.jagex.RuneScape.appdata.xml"
+                },
+                {
+                    "type": "extra-data",
+                    "filename": "runescape.deb",
+                    "only-arches": ["x86_64"],
+                    "url": "https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb",
+                    "sha256": "406b3c223b21d638b5eb2de88edf107afb2c7f06912db6ffcc60f74d4d806d82",
+                    "size": 3014650
                 }
             ]
         }
