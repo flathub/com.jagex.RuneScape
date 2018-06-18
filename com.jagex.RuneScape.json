@@ -7,17 +7,14 @@
     "separate-locales": false,
     "tags": ["proprietary"],
     "finish-args": [
-        /* X11 + XShm access */
-        "--share=ipc", "--socket=x11",
-        /* Sound access */
+        "--share=ipc",
+        "--socket=x11",
         "--socket=pulseaudio",
-        /* Network access */
         "--share=network",
-        /* OpenGL */
         "--device=dri",
         "--persist=Jagex"
     ],
-    "build-options" : {
+    "build-options": {
         "cflags": "-O2 -g",
         "cxxflags": "-O2 -g",
         "env": {
@@ -32,32 +29,27 @@
         "/lib/libGLEW.so",
         "/lib/libpng.*"
     ],
-    "modules": [
-        {
+    "modules": [{
             "name": "libpng",
             "config-opts": ["--disable-static"],
             "cleanup": ["/bin", "/include", "/lib/pkgconfig", "/share"],
-            "sources": [
-                {
-                    /* Must be version 1.2.x */
-                    "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libpng/libpng12/1.2.59/libpng-1.2.59.tar.xz",
-                    "sha256": "b4635f15b8adccc8ad0934eea485ef59cc4cae24d0f0300a9a941e51974ffcc7"
-                }
-            ]
+            "sources": [{
+                "__comment": "Must be version 1.2.x",
+                "type": "archive",
+                "url": "https://downloads.sourceforge.net/project/libpng/libpng12/1.2.59/libpng-1.2.59.tar.xz",
+                "sha256": "b4635f15b8adccc8ad0934eea485ef59cc4cae24d0f0300a9a941e51974ffcc7"
+            }]
         },
         {
-            /* Required to build glew 1.10 */
+            "__comment": "Required to build glew 1.10",
             "name": "libxmu",
             "cleanup": ["/include", "/lib/pkgconfig", "/share"],
-            "sources": [
-                {
-                    /* Use latest version */
-                    "type": "archive",
-                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libXmu-1.1.2.tar.bz2",
-                    "sha256": "756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b"
-                }
-            ]
+            "sources": [{
+                "__comment": "Use the latest version",
+                "type": "archive",
+                "url": "https://xorg.freedesktop.org/releases/individual/lib/libXmu-1.1.2.tar.bz2",
+                "sha256": "756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b"
+            }]
         },
         {
             "name": "glew",
@@ -73,9 +65,8 @@
                 "LIBDIR=/app/lib"
             ],
             "cleanup": ["/include", "/lib/pkgconfig"],
-            "sources": [
-                {
-                    /* Must be version 1.10 */
+            "sources": [{
+                    "__comment": "Must be version 1.10",
                     "type": "archive",
                     "url": "https://downloads.sourceforge.net/project/glew/glew/1.10.0/glew-1.10.0.tgz",
                     "sha256": "99c41320b63f6860869b5fb9af9a1854b15582796c64ee3dfd7096dc0c89f307"
@@ -96,8 +87,7 @@
                 "cp /usr/bin/ar /app/bin",
                 "cp /usr/lib/libbfd-*.so /app/lib"
             ],
-            "sources": [
-                {
+            "sources": [{
                     "type": "script",
                     "dest-filename": "apply_extra",
                     "commands": [
