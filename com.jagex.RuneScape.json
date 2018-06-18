@@ -5,7 +5,9 @@
     "sdk": "org.gnome.Sdk",
     "command": "runescape",
     "separate-locales": false,
-    "tags": ["proprietary"],
+    "tags": [
+        "proprietary"
+    ],
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
@@ -29,27 +31,43 @@
         "/lib/libGLEW.so",
         "/lib/libpng.*"
     ],
-    "modules": [{
+    "modules": [
+        {
             "name": "libpng",
-            "config-opts": ["--disable-static"],
-            "cleanup": ["/bin", "/include", "/lib/pkgconfig", "/share"],
-            "sources": [{
-                "__comment": "Must be version 1.2.x",
-                "type": "archive",
-                "url": "https://downloads.sourceforge.net/project/libpng/libpng12/1.2.59/libpng-1.2.59.tar.xz",
-                "sha256": "b4635f15b8adccc8ad0934eea485ef59cc4cae24d0f0300a9a941e51974ffcc7"
-            }]
+            "config-opts": [
+                "--disable-static"
+            ],
+            "cleanup": [
+                "/bin",
+                "/include",
+                "/lib/pkgconfig",
+                "/share"
+            ],
+            "sources": [
+                {
+                    "__comment": "Must be version 1.2.x",
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/libpng/libpng12/1.2.59/libpng-1.2.59.tar.xz",
+                    "sha256": "b4635f15b8adccc8ad0934eea485ef59cc4cae24d0f0300a9a941e51974ffcc7"
+                }
+            ]
         },
         {
             "__comment": "Required to build glew 1.10",
             "name": "libxmu",
-            "cleanup": ["/include", "/lib/pkgconfig", "/share"],
-            "sources": [{
-                "__comment": "Use the latest version",
-                "type": "archive",
-                "url": "https://xorg.freedesktop.org/releases/individual/lib/libXmu-1.1.2.tar.bz2",
-                "sha256": "756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b"
-            }]
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/share"
+            ],
+            "sources": [
+                {
+                    "__comment": "Use the latest version",
+                    "type": "archive",
+                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libXmu-1.1.2.tar.bz2",
+                    "sha256": "756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b"
+                }
+            ]
         },
         {
             "name": "glew",
@@ -64,8 +82,12 @@
                 "GLEW_DEST=/app",
                 "LIBDIR=/app/lib"
             ],
-            "cleanup": ["/include", "/lib/pkgconfig"],
-            "sources": [{
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "sources": [
+                {
                     "__comment": "Must be version 1.10",
                     "type": "archive",
                     "url": "https://downloads.sourceforge.net/project/glew/glew/1.10.0/glew-1.10.0.tgz",
@@ -87,7 +109,8 @@
                 "cp /usr/bin/ar /app/bin",
                 "cp /usr/lib/libbfd-*.so /app/lib"
             ],
-            "sources": [{
+            "sources": [
+                {
                     "type": "script",
                     "dest-filename": "apply_extra",
                     "commands": [
@@ -95,23 +118,21 @@
                         "tar xf data.tar.xz",
                         "rm -f runescape.deb control.tar.gz data.tar.xz debian-binary _gpgbuilder",
                         "mv usr/share/games/runescape-launcher/runescape .",
-
                         "mv usr/bin/runescape-launcher .",
                         "sed -i 's|/usr/share/games/runescape-launcher/|/app/extra/|g' runescape-launcher",
-
                         "mkdir -p export/share/applications",
                         "sed -i 's|/usr/bin/runescape-launcher|runescape|g' usr/share/applications/runescape-launcher.desktop",
                         "sed s/Icon=runescape/Icon=com.jagex.RuneScape/ usr/share/applications/runescape-launcher.desktop > export/share/applications/com.jagex.RuneScape.desktop",
-
                         "mv usr/share/icons export/share/",
                         "for d in export/share/icons/hicolor/*; do mv $d/apps/runescape.png $d/apps/com.jagex.RuneScape.png; done;",
-
                         "rm -rf usr"
                     ]
                 },
                 {
                     "type": "script",
-                    "commands": ["/app/extra/runescape-launcher $@"],
+                    "commands": [
+                        "/app/extra/runescape-launcher $@"
+                    ],
                     "dest-filename": "runescape.sh"
                 },
                 {
@@ -121,12 +142,14 @@
                 {
                     "type": "extra-data",
                     "filename": "runescape.deb",
-                    "only-arches": ["x86_64"],
+                    "only-arches": [
+                        "x86_64"
+                    ],
                     "url": "https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb",
-                    "sha256": "5ca2a1b5cef8b8c54c05140e183109b57bccd3fb03e660b571c2cb9cfc2b6a28",
-                    "size": 3018084
+                    "sha256": "a9e22e314ce3432d5bfa64cf1eb5cd80916637d3fbf9ddcb13a0120708329048",
+                    "size": 3019110
                 }
             ]
         }
     ]
-}
+} 
