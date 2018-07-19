@@ -1,7 +1,7 @@
 {
     "app-id": "com.jagex.RuneScape",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "master",
     "sdk": "org.gnome.Sdk",
     "command": "runescape",
     "separate-locales": false,
@@ -107,7 +107,7 @@
                 "install runescape.sh /app/bin/runescape",
                 "install -Dm644 com.jagex.RuneScape.appdata.xml /app/share/appdata/com.jagex.RuneScape.appdata.xml",
                 "cp /usr/bin/ar /app/bin",
-                "cp /usr/lib/libbfd-*.so /app/lib"
+                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
             ],
             "sources": [
                 {
