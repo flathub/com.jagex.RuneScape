@@ -131,7 +131,8 @@
                 {
                     "type": "script",
                     "commands": [
-                        "/app/extra/runescape-launcher $@"
+                        "[ '$PULSE_LATENCY_MSEC' ] || export PULSE_LATENCY_MSEC='80'",
+                        "exec /app/extra/runescape-launcher $@"
                     ],
                     "dest-filename": "runescape.sh"
                 },
