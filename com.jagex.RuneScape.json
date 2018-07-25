@@ -100,6 +100,26 @@
             ]
         },
         {
+            "name": "xdotool",
+            "no-autogen": true,
+            "make-args": [
+                "PREFIX=/app"
+            ],
+            "make-install-args": [
+                "PREFIX=/app"
+            ],
+            "cleanup": [
+                "/include"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/jordansissel/xdotool/releases/download/v3.20160805.1/xdotool-3.20160805.1.tar.gz",
+                    "sha256": "35be5ff6edf0c620a0e16f09ea5e101d5173280161772fca18657d83f20fcca8"
+                }
+            ]
+        },
+        {
             "name": "runescape",
             "buildsystem": "simple",
             "build-commands": [
