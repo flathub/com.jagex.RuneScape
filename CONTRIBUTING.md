@@ -17,13 +17,13 @@ To see where the build on Flathub is at run `flatpak remote-info flathub com.jag
 
 1. Install `flatpak-builder`
 1. Clone the repository and cd into it.
-1. Build to a local repository: `flatpak-builder --force-clean --repo=repo runescape com.jagex.RuneScape.json`
-1. Add your local repository to your list in flatpak: `flatpak --user remote-add runescape-local --no-gpg-verify repo`
+1. Build to a local repository: `flatpak-builder --state-dir=tmp/flatpak-builder --force-clean --repo=tmp/repo tmp/runescape com.jagex.RuneScape.json`
+1. Add your local repository to your list in flatpak: `flatpak --user remote-add runescape-local --no-gpg-verify tmp/repo`
 1. Install the game from your local repository: `flatpak --user install runescape-local com.jagex.RuneScape`
 
 And as the manifest gets updated run the following to update your flatpak locally.
 
-`flatpak --user update com.jagex.RuneScape`
+`flatpak --user update -y com.jagex.RuneScape`
 
 ## Detailed guidelines
 
