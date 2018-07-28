@@ -15,6 +15,7 @@ sed -i 's|/usr/share/games/runescape-launcher/|/app/extra/|g' runescape-launcher
 mkdir -p export/share/applications
 
 sed -i 's|/usr/bin/runescape-launcher|runescape|g' usr/share/applications/runescape-launcher.desktop
+sed -i 's|Categories=Game;|Categories=Game;\nStartupWMClass=RuneScape|g' usr/share/applications/runescape-launcher.desktop
 
 sed s/Icon=runescape/Icon=com.jagex.RuneScape/ usr/share/applications/runescape-launcher.desktop > export/share/applications/com.jagex.RuneScape.desktop
 
