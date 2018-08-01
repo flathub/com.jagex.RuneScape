@@ -62,15 +62,33 @@ https.get(installFile, function(response) {
             return;
           }
 
-          await octokit.pullRequests.create({
-            owner: "flathub",
-            repo: "com.jagex.RuneScape",
+          const owner = "flathub";
+          const repo = "com.jagex.RuneScape";
+
+          const pullRequest = await octokit.pullRequests.create({
+            owner,
+            repo,
             title: "Update debian data",
             head: branchName,
             base: "master",
             body: "Automatic update of debian metadata",
             maintainer_can_modify: true
           });
+
+          const mergeResult = await octokit.pullRequests.merge({
+            owner,
+            repo,
+            number: pullRequest.number,
+            merge_method: 'rebase'
+          });
+
+          if (mergeResult.merged !== undefined && mergeResult.merged === true) {
+            process.exit(0);
+            return;
+          }
+
+          process.exit(1);
+          return;
         });
     });
   });
