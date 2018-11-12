@@ -151,8 +151,8 @@
                         "x86_64"
                     ],
                     "url": "https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb",
-                    "sha256": "9212d120123eb72233485e84526ac615ef9ec6296b2831d4ad4a35fdfc248427",
-                    "size": 3016880
+                    "sha256": "dae304f68941563d5c30cf2339453045642dacd7b4c36fa522eac4e65dae50cb",
+                    "size": 3018272
                 }
             ]
         }
