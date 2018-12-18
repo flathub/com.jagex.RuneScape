@@ -75,15 +75,20 @@ https.get(installFile, function(response) {
             maintainer_can_modify: true
           });
 
-          const mergeResult = await octokit.pullRequests.merge({
-            owner,
-            repo,
-            number: pullRequest.number,
-            merge_method: 'rebase'
-          });
+          try {
+            const mergeResult = await octokit.pullRequests.merge({
+              owner,
+              repo,
+              number: pullRequest.number,
+              merge_method: 'rebase'
+            });
 
-          if (mergeResult.merged !== undefined && mergeResult.merged === true) {
-            process.exit(0);
+            if (mergeResult.merged !== undefined && mergeResult.merged === true) {
+              process.exit(0);
+              return;
+            }
+          } catch (error) {
+            process.exit(1);
             return;
           }
 
