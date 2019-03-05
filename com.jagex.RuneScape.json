@@ -1,8 +1,8 @@
 {
     "app-id": "com.jagex.RuneScape",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
-    "sdk": "org.gnome.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "18.08",
+    "sdk": "org.freedesktop.Sdk",
     "command": "runescape",
     "separate-locales": false,
     "tags": [
@@ -16,13 +16,6 @@
         "--device=dri",
         "--persist=Jagex"
     ],
-    "build-options": {
-        "cflags": "-O2 -g",
-        "cxxflags": "-O2 -g",
-        "env": {
-            "V": "1"
-        }
-    },
     "cleanup": [
         "*.a",
         "*.la",
@@ -32,6 +25,7 @@
         "/lib/libpng.*"
     ],
     "modules": [
+        "shared-modules/gtk2/gtk2.json",
         {
             "name": "libpng",
             "config-opts": [
@@ -127,7 +121,7 @@
                 "install runescape.sh /app/bin/runescape",
                 "install -Dm644 com.jagex.RuneScape.appdata.xml /app/share/appdata/com.jagex.RuneScape.appdata.xml",
                 "cp /usr/bin/ar /app/bin",
-                "cp /usr/lib/libbfd-*.so /app/lib"
+                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
             ],
             "sources": [
                 {
