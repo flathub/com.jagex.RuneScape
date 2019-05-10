@@ -79,7 +79,7 @@ https.get(installFile, function(response) {
             const mergeResult = await octokit.pullRequests.merge({
               owner,
               repo,
-              number: pullRequest.number,
+              pull_number: pullRequest.number,
               merge_method: 'rebase'
             });
 
@@ -93,7 +93,6 @@ https.get(installFile, function(response) {
           }
 
           process.exit(1);
-          return;
         });
     });
   });
