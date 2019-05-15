@@ -51,13 +51,13 @@ https.get(installFile, function(response) {
           rsSource.size = parseInt(newLength, 10);
           fs.writeFileSync(
             dataFile,
-            `${JSON.stringify(currentData, null, 4)} \n`,
+            `${JSON.stringify(currentData, null, 4)}\n`,
             "utf-8"
           );
         })
         .add(dataFile)
         .commit("auto: Update data for new binary")
-        .push("origin", branchName, async () => {
+        .push("origin", branchName, () => {
           if (makePr === false) {
             return;
           }
@@ -65,7 +65,7 @@ https.get(installFile, function(response) {
           const owner = "flathub";
           const repo = "com.jagex.RuneScape";
 
-          const pullRequest = await octokit.pullRequests.create({
+          octokit.pullRequests.create({
             owner,
             repo,
             title: "Update debian data",
@@ -73,26 +73,14 @@ https.get(installFile, function(response) {
             base: "master",
             body: "Automatic update of debian metadata",
             maintainer_can_modify: true
-          });
-
-          try {
-            const mergeResult = await octokit.pullRequests.merge({
+          }).then((pullRequest) => {
+            octokit.pullRequests.merge({
               owner,
               repo,
-              pull_number: pullRequest.number,
+              number: pullRequest.number,
               merge_method: 'rebase'
-            });
-
-            if (mergeResult.merged !== undefined && mergeResult.merged === true) {
-              process.exit(0);
-              return;
-            }
-          } catch (error) {
-            process.exit(1);
-            return;
-          }
-
-          process.exit(1);
+            })
+          });
         });
     });
   });
