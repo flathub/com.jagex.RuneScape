@@ -1,3 +1,4 @@
 {
-  "skip-arches": ["aarch64", "arm", "i386"]
+  "skip-arches": ["aarch64", "arm", "i386"],
+  "skip-appstream-check": true
 }
