@@ -78,6 +78,7 @@ https.get(installFile, function(response) {
               owner,
               repo,
               number: pullRequest.number,
+              pull_number: pullRequest.number,
               merge_method: 'rebase'
             })
           });
