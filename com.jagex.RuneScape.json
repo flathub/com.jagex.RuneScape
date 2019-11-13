@@ -18,101 +18,10 @@
     ],
     "cleanup": [
         "*.a",
-        "*.la",
-        "/lib/libXmuu*",
-        "/lib/libXmu.so",
-        "/lib/libGLEW.so",
-        "/lib/libpng.*"
+        "*.la"
     ],
     "modules": [
         "shared-modules/gtk2/gtk2.json",
-        {
-            "name": "libpng",
-            "config-opts": [
-                "--disable-static"
-            ],
-            "cleanup": [
-                "/bin",
-                "/include",
-                "/lib/pkgconfig",
-                "/share"
-            ],
-            "sources": [
-                {
-                    "__comment": "Must be version 1.2.x",
-                    "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/libpng/libpng12/1.2.59/libpng-1.2.59.tar.xz",
-                    "sha256": "b4635f15b8adccc8ad0934eea485ef59cc4cae24d0f0300a9a941e51974ffcc7"
-                }
-            ]
-        },
-        {
-            "__comment": "Required to build glew 1.10",
-            "name": "libxmu",
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig",
-                "/share"
-            ],
-            "sources": [
-                {
-                    "__comment": "Use the latest version",
-                    "type": "archive",
-                    "url": "https://xorg.freedesktop.org/releases/individual/lib/libXmu-1.1.2.tar.bz2",
-                    "sha256": "756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b"
-                }
-            ]
-        },
-        {
-            "name": "glew",
-            "no-autogen": true,
-            "make-args": [
-                "GLEW_PREFIX=/app",
-                "GLEW_DEST=/app",
-                "LIBDIR=/app/lib"
-            ],
-            "make-install-args": [
-                "GLEW_PREFIX=/app",
-                "GLEW_DEST=/app",
-                "LIBDIR=/app/lib"
-            ],
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "sources": [
-                {
-                    "__comment": "Must be version 1.10",
-                    "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/glew/glew/1.10.0/glew-1.10.0.tgz",
-                    "sha256": "99c41320b63f6860869b5fb9af9a1854b15582796c64ee3dfd7096dc0c89f307"
-                },
-                {
-                    "type": "patch",
-                    "path": "glew-no-static-lib.patch"
-                }
-            ]
-        },
-        {
-            "name": "xdotool",
-            "no-autogen": true,
-            "make-args": [
-                "PREFIX=/app"
-            ],
-            "make-install-args": [
-                "PREFIX=/app"
-            ],
-            "cleanup": [
-                "/include"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/jordansissel/xdotool/releases/download/v3.20160805.1/xdotool-3.20160805.1.tar.gz",
-                    "sha256": "35be5ff6edf0c620a0e16f09ea5e101d5173280161772fca18657d83f20fcca8"
-                }
-            ]
-        },
         {
             "name": "runescape",
             "buildsystem": "simple",
@@ -144,9 +53,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb",
-                    "sha256": "a5ff396560362503e0f638bb6eec8ec804d78fd8f8eda805a02b00c1483149e8",
-                    "size": 727
+		    "url": "https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.5_amd64.deb",
+                    "sha256": "e7f961014c2fbc5ee90c5fe47e342c1fbaa535b19199677175a3afdcd0bea789",
+                    "size": 3900360
                 }
             ]
         }

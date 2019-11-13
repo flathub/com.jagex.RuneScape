@@ -17,7 +17,7 @@ const originalHash = rsSource.sha256;
 const tmpFile = path.resolve(__dirname, "..", "tmp", "rs.deb");
 const hash = crypto.createHash("sha256");
 const installFile =
-  "https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.4_amd64.deb";
+  "https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.5_amd64.deb";
 let makePr = false;
 if (process.env["FLATHUB_RS_GITHUB_TOKEN"] !== undefined) {
   makePr = true;
