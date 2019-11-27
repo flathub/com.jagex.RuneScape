@@ -23,34 +23,6 @@
     "modules": [
         "shared-modules/gtk2/gtk2.json",
         {
-            "name": "openssl",
-            "configure-commands":[
-                "./Configure --prefix=/app \
-                --libdir=/app/lib \
-                --openssldir=/app/etc/ssl \
-                --with-krb5-flavor=MIT\
-                enable-krb5 \
-                shared \,
-                threads"
-            ],
-            "cleanup": [
-                "/include",
-                "/lib/pkgconfig"
-            ],
-            "sources": [
-                {
-                    "__comment": "Must be version 1.10",
-                    "type": "archive",
-                    "url": "https://www.openssl.org/source/openssl-1.0.2t.tar.gz",
-                    "sha256": "14cb464efe7ac6b54799b34456bd69558a749a4931ecfd9cf9f71d7881cac7bc"
-                },
-                {
-                    "type": "patch",
-                    "path": "openssl-version-script.patch"
-                }
-            ]
-    },
-	{
             "name": "runescape",
             "buildsystem": "simple",
             "build-commands": [
