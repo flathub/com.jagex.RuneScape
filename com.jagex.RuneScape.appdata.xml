@@ -29,14 +29,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">http://www.runescape.com/</url>
-  <!-- These are the icons for the Android app, https://play.google.com/store/apps/details?id=com.jagex.RSCompanion -->
-  <icon type="remote" height="16" width="16">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w16</icon>
-  <icon type="remote" height="24" width="24">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w24</icon>
-  <icon type="remote" height="32" width="32">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w32</icon>
-  <icon type="remote" height="48" width="48">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w48</icon>
-  <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w64</icon>
-  <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w128</icon>
-  <icon type="remote" height="256" width="256">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w256</icon>
+  <!-- This icon is from the Android app, https://play.google.com/store/apps/details?id=com.jagex.RSCompanion -->
   <icon type="remote" height="512" width="512">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w512</icon>
   <categories>
     <category>Game</category>
