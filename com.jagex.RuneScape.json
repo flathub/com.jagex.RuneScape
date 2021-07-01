@@ -54,8 +54,8 @@
                         "x86_64"
                     ],
                     "url": "https://content.runescape.com/downloads/ubuntu/pool/non-free/r/runescape-launcher/runescape-launcher_2.2.9_amd64.deb",
-                    "sha256": "b1ca3a8dea3b7426c5d3c879efa831bc3d0de5faae60fdf79a672afb3e1df929",
-                    "size": 3874184,
+                    "sha256": "cdf6833172f95f534438392deec8027925694f8f534a0b4a513d696d2f5c1cb3",
+                    "size": 3872920,
                     "x-checker-data": {
                         "type": "debian-repo",
                         "package-name": "runescape-launcher",
