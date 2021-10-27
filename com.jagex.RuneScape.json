@@ -1,7 +1,7 @@
 {
     "app-id": "com.jagex.RuneScape",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "runescape",
     "separate-locales": false,
