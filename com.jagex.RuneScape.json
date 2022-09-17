@@ -1,7 +1,7 @@
 {
     "app-id": "com.jagex.RuneScape",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "runescape",
     "separate-locales": false,
@@ -22,6 +22,22 @@
     ],
     "modules": [
         "shared-modules/gtk2/gtk2.json",
+        {
+            "name": "openssl",
+            "buildsystem": "simple",
+            "build-commands": [
+                "./config --prefix=/app --openssldir=/app/ssl shared zlib",
+                "make -j $FLATPAK_BUILDER_N_JOBS",
+                "make install"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.openssl.org/source/openssl-1.1.1q.tar.gz",
+                    "sha256": "d7939ce614029cdff0b6c20f0e2e5703158a489a72b2507b8bd51bf8c8fd10ca"
+                }
+            ]
+        },
         {
             "name": "runescape",
             "buildsystem": "simple",
