@@ -11,6 +11,7 @@ mv usr/share/games/runescape-launcher/runescape .
 mv usr/bin/runescape-launcher .
 
 sed -i 's|/usr/share/games/runescape-launcher/|/app/extra/|g' runescape-launcher
+sed -i 's|export PULSE_LATENCY_MSEC|#export PULSE_LATENCY_MSEC|g' runescape-launcher
 
 mkdir -p export/share/applications
 
