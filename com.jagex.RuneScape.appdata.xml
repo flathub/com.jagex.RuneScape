@@ -9,6 +9,7 @@
       Play the best MMORPG RuneScape for free. Join the millions of others already exploring the fantasy game world of Gielinor.
     </p>
   </description>
+  <launchable type="desktop-id">com.jagex.RuneScape.desktop</launchable>
   <releases>
     <release version="2.2.11" date="2023-02-06"/>
     <release version="2.2.10" date="2022-05-30"/>
@@ -18,7 +19,7 @@
     <release version="2.2.4" date="2018-01-22"/>
   </releases>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <image type="source">https://cdn.runescape.com/assets/img/external/news/2016/02/dev-blog/3-NXT-global-illumination.jpg</image>
     </screenshot>
     <screenshot>
