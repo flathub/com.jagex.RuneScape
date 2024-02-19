@@ -50,6 +50,8 @@
                 "install apply_extra /app/bin",
                 "install runescape.sh /app/bin/runescape",
                 "install -Dm644 com.jagex.RuneScape.appdata.xml /app/share/appdata/com.jagex.RuneScape.appdata.xml",
+                "install -Dm644  runescape.png /app/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png",
+                "install -Dm644  runescape-launcher.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "cp /usr/bin/ar /app/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
             ],
@@ -67,6 +69,14 @@
                 {
                     "type": "file",
                     "path": "com.jagex.RuneScape.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "runescape.png"
+                },
+                {
+                    "type": "file",
+                    "path": "runescape-launcher.desktop"
                 },
                 {
                     "type": "extra-data",
