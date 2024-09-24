@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ar x runescape.deb
+bsdtar xf runescape.deb
 
 tar xf data.tar.xz
 
