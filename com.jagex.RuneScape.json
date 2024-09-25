@@ -1,7 +1,7 @@
 {
     "app-id": "com.jagex.RuneScape",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "runescape",
     "separate-locales": false,
@@ -52,7 +52,6 @@
                 "install -Dm644 com.jagex.RuneScape.appdata.xml /app/share/appdata/com.jagex.RuneScape.appdata.xml",
                 "install -Dm644  runescape.png /app/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png",
                 "install -Dm644  runescape-launcher.desktop /app/share/applications/${FLATPAK_ID}.desktop",
-                "cp /usr/bin/ar /app/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
             ],
             "sources": [
