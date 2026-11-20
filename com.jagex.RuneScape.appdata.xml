@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.jagex.RuneScape.desktop</id>
+  <id>com.jagex.RuneScape</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary=https://legal.jagex.com/docs/terms</project_license>
   <name>RuneScape</name>
-  <developer_name>Jagex</developer_name>
+  <developer id="com.jagex">
+    <name>Jagex</name>
+  </developer>
   <summary>A free-to-play fantasy MMORPG</summary>
   <description>
     <p>
@@ -10,10 +14,11 @@
     </p>
   </description>
   <launchable type="desktop-id">com.jagex.RuneScape.desktop</launchable>
+  <provides>
+    <id>com.jagex.RuneScape.desktop</id>
+  </provides>
   <releases>
-    <release version="2.2.12" date="2026-01-19">
-      <description></description>
-    </release>
+    <release version="2.2.12" date="2026-01-19"/>
     <release version="2.2.11" date="2023-02-06"/>
     <release version="2.2.10" date="2022-05-30"/>
     <release version="2.2.9" date="2021-02-26"/>
@@ -32,14 +37,9 @@
       <image type="source">https://cdn.runescape.com/assets/img/external/news/2016/02/dev-blog/10-water-effects.jpg</image>
     </screenshot>
   </screenshots>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">http://www.runescape.com/</url>
   <!-- This icon is from the Android app, https://play.google.com/store/apps/details?id=com.jagex.RSCompanion -->
   <icon type="remote" height="512" width="512">https://lh3.googleusercontent.com/2J5PH-QM9n7DjmdJx4EQZq1t4o6Wc0NBkI2RyRiggAOgLf4mupfSXcrC5Jd0vh2okcc=w512</icon>
-  <categories>
-    <category>Game</category>
-  </categories>
   <kudos>
     <kudo>HiDpiIcon</kudo>
   </kudos>
